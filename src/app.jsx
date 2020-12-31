@@ -4,7 +4,7 @@ import "./styles/global-styled.scss";
 
 const App = () => {
   return (
-    <main className="content-app">
+    <main className="content-app ">
       <Home />
     </main>
   );

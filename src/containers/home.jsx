@@ -6,26 +6,27 @@ import Contacts from "../components/contacts";
 import LocationsList from "../components/locations";
 import useWeather from "../hooks/useWeather";
 import Spinner from "../components/spinner";
+import "../styles/base/_animations.scss";
 
 const Home = () => {
   const { cityMainWeather, loader } = useWeather();
-  debugger;
+
   return (
     <>
       {!loader ? (
-        <>
+        <main className="fade-anima">
           <Header
             icon={cityMainWeather?.weather?.icon}
             temp={cityMainWeather?.weather?.temp}
             description={cityMainWeather?.weather?.description}
           />
-          <main className="main-content fade-anima">
+          <section className="main-content ">
             <ListForecast forecats={cityMainWeather?.forecasts} />
             <PlaceToVisit />
             <Contacts />
             <LocationsList locations={cityMainWeather?.otherLocations} />
-          </main>
-        </>
+          </section>
+        </main>
       ) : (
         <Spinner />
       )}
