@@ -8,7 +8,7 @@ const Header = ({ icon, temp, description }) => {
   return (
     <>
       <header className="content-header">
-        <img src={banner} alt="forecast" />
+        <img src={banner} loading="lazy" alt="forecast" />
         <div className="main-forecast">
           <img src={btnDark} className="img-dark" alt="icon-forecast" />
           <div className="forecast-icon">
