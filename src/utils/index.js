@@ -34,7 +34,7 @@ export const fetchRequest = ({ method = "GET", url } = {}) => {
       }
     };
     req.onerror = function () {
-      reject("An error occurred during the transaction");
+      reject("An error occurred during the transaction!");
     };
   });
 };
