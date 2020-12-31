@@ -1,0 +1,81 @@
+@import "../../styles/base/variables.scss";
+@import "../../styles/base/mixins.scss";
+
+.location-item {
+  background-color: $gs-white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 0 10px 10px 0;
+  max-width: 350px;
+
+  & .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    & .icon-city {
+      background-color: $color-fourth;
+      border-radius: 20px;
+      padding: 15px;
+    }
+
+    & p.degrees-city {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    p.info-city {
+      text-align: left;
+
+      & .country {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+
+      & .city {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+
+    hr {
+      border: 1px solid $color-fiveth;
+      height: 50px;
+      opacity: 0.4;
+    }
+  }
+
+  & .info-aditional {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.5;
+    padding: 10px;
+  }
+}
+
+.img-location {
+  & img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  @include respond-to(largeDesktop) {
+    & {
+      margin-top: 30px;
+      & img {
+        border: 1px dashed $gs-ligth-gray;
+      }
+    }
+  }
+}
+
+.other-locations {
+  @include respond-to(largeDesktop) {
+    margin-top: -170px;
+    margin-right: 40px;
+  }
+}

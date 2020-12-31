@@ -1,0 +1,32 @@
+@import "../../styles/base/variables.scss";
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $gs-white;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.19), 0 5px 7px rgba(0, 0, 0, 0.23);
+  padding-left: 15px;
+  border-radius: 20px;
+  margin-top: 10px;
+
+  &:first-of-type {
+    & .info-degrees {
+      background: $color-second;
+      color: $gs-white;
+    }
+  }
+
+  & .info-day {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  & .info-degrees {
+    background: #dce8f5;
+    border-radius: 20px;
+    padding: 30px 15px;
+    text-align: center;
+  }
+}

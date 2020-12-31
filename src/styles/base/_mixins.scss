@@ -1,0 +1,15 @@
+@import "../base/variables.scss";
+//Mixin screen types
+@mixin respond-to($media) {
+  @if $media == largeDesktop {
+    @media (min-width: $large-desktop) {
+      @content;
+    }
+  }
+
+  @if $media == handheld {
+    @media (min-width: $handheld) {
+      @content;
+    }
+  }
+}
